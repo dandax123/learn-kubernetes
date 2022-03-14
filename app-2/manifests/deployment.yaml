@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project
+  template:
+    metadata:
+      labels:
+        app: project
+    spec:
+      containers:
+        - name: project
+          image: dandax123/project:v1
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
