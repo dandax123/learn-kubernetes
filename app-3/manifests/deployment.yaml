@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: pingpong
-        image: dandax123/ping-pong:v1
+        image: dandax123/ping-pong:v1.6
         resources:
           limits:
             memory: "128Mi"
