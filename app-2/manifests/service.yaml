@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: project-svc
+  name: backend-service
 spec:
   type: ClusterIP
   selector:
-    app: project
+    app: backend
   ports:
-    - port: 2345
+    - port: 80
       protocol: TCP
       targetPort: 3000

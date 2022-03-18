@@ -10,6 +10,13 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: project-svc
+            name: frontend-svc
             port:
               number: 2345
+      - path: /backend        
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-service
+            port:
+              number: 80

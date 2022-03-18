@@ -16,12 +16,16 @@
     <title>Smart Spider</title>
   </head>
   <body>
-    <form style="margin: 50px;">
+    <form style="margin: 50px;" action="/todo" method="POST" >
       <input type="text" name="todo">
       <button type="submit">Create todo</button>
     </form>
     <div style="margin: 50px; font-size:xx-large;">
-      <p>Todo 1</p>
+      {{#each todos}}
+      <input type="checkbox" name="todo" {{#if this.done}} checked {{/if}} style="width: 30px; height: 30px;">
+       {{this.todo}}
+      </br>
+      {{/each}}
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
